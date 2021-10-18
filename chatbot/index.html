@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Chat bot</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="css/chatbox.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  
+  
+  <script type="text/javascript" src="js/chatbox.js"></script>
+  <script type="text/javascript" src="js/jquery.convform.js"></script>
+  <link rel="stylesheet" href="css/jquery.convform.css">
+   
+
+
+
+</head>
+<body id="boody">
+<div class="ikonachatu">
+<img src="img/chaticon.png" id="icon">
+</div>
+
+<div class="chatbox">
+    <div class="conv-form-wrapper">
+        <form action="" method="GET" class="hidden">
+
+            <select   name="plec" data-conv-question="Witaj! Jestem asystentem który pomoże ci w każdej chwili! Proszę odpowiedz na jedno pytanie. Jaka jest twoja płeć?">
+                
+                <option   value="kobieta">Kobieta</option>
+                <option  value="mezczyzna">Mężczyzna</option>
+
+                     </select>
+            <div data-conv-fork="plec">
+                <div data-conv-case="mezczyzna">
+                    
+                    <select name="pomoc" data-conv-question="Witaj! W czym mogę panu pomóc?">
+                        <option value="pomoc_strona">Problem ze stroną</option>
+                        <option value="problem_płatność">Problem z płatnością</option>
+                        <option value="opis_strona">Co to za strona?</option>
+                        <option value="pomoc_techniczna">Pomoc techniczna</option>
+
+                    </select>
+
+                    <div data-conv-case="opis_strona">
+                      <select name="opisstrony" data-conv-question="Eldorado szmato">
+
+                      </select>
+
+                    </div>
+                    
+                </div>
+                <div data-conv-case="kobieta">
+                    <input onchange="wartosc(event)" type="text"id="kobieta_1" name="kobieta_1" data-conv-question="Witaj! W czym mogę pani pomóc?">
+
+
+                   
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+
+</div>
+<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h1>
+<div class="gallery">
+    <a target="_blank">
+        <img src="peryferia/słuchawki.jpg" alt="słuchawki" width="600" height="400">
+    </a>
+    <div class="desc">Słuchawki 340 zł Opis:Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quae.
+        Doloribus expedita vel sapiente repudiandae id. Nihil nemo eaque, sed, veniam quidem at beatae quis, numquam
+        enim minus fugiat cum?</div>
+</div>
+
+<div class="gallery">
+    <a target="_blank">
+        <img src="peryferia/klawiatura.jpg" alt="klawiatura" width="600" height="400">
+    </a>
+    <div class="desc">Klawiatura 213 zł Opis:Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima
+        molestias aliquam natus consequatur consectetur sunt ducimus quis eum. Perspiciatis, unde vel? Dolore enim
+        necessitatibus possimus natus sunt aspernatur blanditiis ipsa?</div>
+</div>
+
+<div class="gallery">
+    <a target="_blank">
+        <img src="peryferia/myszka.jpg" alt="myszka" width="600" height="400">
+    </a>
+    <div class="desc">myszka 80zł Opis:Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt mollitia
+        veritatis similique reprehenderit sapiente ut, minus laborum fuga sequi impedit eaque atque! Vel expedita
+        harum aliquam nisi laborum est fugiat.</div>
+</div>
+</div>
+
+
+    
+</body>
+</html>
+<style>
+    div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+    }
+
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+
+    div.gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    div.desc {
+        padding: 15px;
+        text-align: center;
+    }
+
+    body {
+        color: rgb(0, 255, 128);
+        background-color: rgb(38, 38, 38);
+    }
+</style>

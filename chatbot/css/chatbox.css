@@ -1,0 +1,57 @@
+.ikonachatu{
+    
+    position: fixed;
+    right: 40px;
+    bottom: 10px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    
+}
+#icon{
+    width: 200px;
+}
+
+.chatbox{
+    position: fixed;
+    right: 20px;
+    bottom: 250px;
+    width: 400px;
+    height: 52vh;
+    background: #dedede;
+    z-index: 1000;
+    transition: all 0.4s ease-out;
+    transform: scaleY(0);
+}
+
+.chatbox.active{
+    transform: scaleY(1);
+}
+
+#boody{
+    background-color: rgb(38, 38, 38);
+}
+
+.hidden{
+    display: none !important;
+}
+
+#messages{
+    padding: 20px;
+}
+
+#userInput{
+    padding: 5px;
+    
+}
+
+.conv-form-wrapper textarea{
+    height: 30px;
+    overflow: hidden;
+    resize: none;
+}
+
+#messages.from{
+    padding-right: 200px;
+}
